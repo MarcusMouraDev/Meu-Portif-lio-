@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Marcus Moura — Engenharia de Software",
     description: "Projetos em Python, web, APIs e automação.",
     url: siteUrl,
-    images: [{ url: socialImage, width: 1536, height: 1024, alt: "Portfólio de Marcus Moura" }],
+    images: [{ url: socialImage, width: 1200, height: 630, type: "image/png", alt: "Portfólio de Marcus Moura" }],
     locale: "pt_BR",
     type: "website",
   },

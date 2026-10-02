@@ -15,6 +15,8 @@ test("renderiza portfólio completo", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Marcus Moura/);
+  assert.match(html, new RegExp(`Marcus Moura © (?:<!-- -->)?${new Date().getUTCFullYear()}`));
+  assert.match(html, /og\.png/);
   assert.match(html, /Desenvolvedor Python &amp; Web/);
   assert.match(html, /Solicitar demonstração/);
   assert.match(html, /Inter Task Monitor/);

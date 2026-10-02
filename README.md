@@ -40,25 +40,33 @@ Para validar produção:
 
 ```bash
 pnpm lint
+pnpm typecheck
 pnpm test
-pnpm build
+pnpm start
 ```
+
+O build usa a entrada oficial `vinext/server/app-router-entry`, sem depender de arquivos locais de publicação ou bindings D1/R2. `pnpm start` serve o Worker de produção gerado pelo build; não publica o site. `pnpm test:checkout` verifica os arquivos de configuração, a imagem social versionada e o ano em UTC sem iniciar o servidor.
+
+Ainda não há lockfile versionado. Para reproduzir as dependências transitivas, a instalação precisa gerar um lockfile, que deve ser versionado junto da validação de lint, TypeScript, build e testes com acesso ao registry.
 
 ## Estrutura principal
 
 ```text
-app/page.tsx                  Conteúdo, filtros e interações do portfólio
+app/page.tsx                  Entrada SSR e ano compartilhado com o navegador
+app/portfolio.tsx             Conteúdo, filtros e interações do portfólio
 app/globals.css               Tokens visuais, layout responsivo e motion
 tests/rendered-html.test.mjs  Testes de conteúdo e renderização
 public/                       Favicon, imagem Open Graph e assets públicos
-.openai/hosting.json          Configuração de publicação no Sites
+vite.config.ts                Worker padrão Vinext/Cloudflare, sem configuração privada
 ```
 
 ## Publicação
 
-Site publicado em:
+URL canônica preservada:
 
 <https://marcus-moura-portfolio.mpfagundesmoura.chatgpt.site>
+
+A associação ao projeto existente no Sites pertence ao fluxo de publicação. Nenhum identificador privado de projeto ou conta é necessário para executar o checkout.
 
 ## Contato
 

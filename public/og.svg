@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Marcus Moura — Engenharia de Software</title>
+  <desc id="description">Portfólio com projetos em Python, web, APIs, automação e experiências mobile.</desc>
+  <rect width="1200" height="630" fill="#0b0d11"/>
+  <rect x="70" y="90" width="8" height="450" rx="4" fill="#69d6c5"/>
+  <text x="112" y="182" fill="#69d6c5" font-family="Arial, sans-serif" font-size="26" letter-spacing="4">ENGENHARIA DE SOFTWARE</text>
+  <text x="106" y="306" fill="#f4f3ef" font-family="Arial, sans-serif" font-size="92" font-weight="700">Marcus Moura</text>
+  <text x="112" y="392" fill="#c2c5cc" font-family="Arial, sans-serif" font-size="32">Python · Web · APIs · Automação · Mobile</text>
+  <text x="112" y="492" fill="#c2c5cc" font-family="Arial, sans-serif" font-size="24">Portfólio de projetos</text>
+</svg>
